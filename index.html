@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png+xml" href="img/Logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetPatinhas - A empresa mais fofa do Brasil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!--Início_Cabeçalho-->
+    <header style="background-color: white; border-bottom: 3px solid hsl(251, 33%, 54%) ;">
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <a href="index.html">
+              <img src="img/Logo.png" alt="logo">
+              <a href="index.html" class="nome">PetPatinhas</a>
+            </a>
+          </div>
+            <ul class="ui">
+              <a class="txtn" href="index.html">Home</a>
+              <a class="txtn" href="#">Institucional</a>
+              <a class="txtn" href="#">Sobre</a>
+              <a class="adote" href="#">Adotar</a>
+              <a class="login" href="#">Entrar</a>
+              <div class="close" onclick="closeMenu()">
+                <i class="fa-solid fa-rectangle-xmark"></i>
+              </div>
+            </ul>
+          <div class="ico" onclick="openMenu()">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!--Fim_Cabeçalho-->
+
+    <!--Início_Carrossel-->
+    <section class="slider">
+      <!--Início_div_Slides-->
+      <div class="slides">
+        <!--Início_Botões-->
+        <input type="radio" name="radio-btn" id="r1">
+        <input type="radio" name="radio-btn" id="r2">
+        <!--Fim_Botões-->
+        <!--Início_Imagens-->
+        <div class="slide first">
+          <a href="#.html">
+            <img src="img/Slider1.jpg" alt="imagem 1">
+          </a>
+        </div>
+        <div class="slide">
+          <a href="#.html">
+            <img src="img/Slider2.png" alt="imagem 2">
+          </a>
+        </div>
+        <!--Fim_Imagens-->
+        <!--Início_Navegação_automática-->
+        <div class="navi-auto"> 
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+        </div>
+        <!--Fim_Navegação_automática-->
+      </div>
+      <!--Fim_div_Slides-->
+      <!--Início_Navegação_Manual-->
+      <div class="navi-manual">
+        <label for="r1" class="manual-btn"></label>
+        <label for="r2" class="manual-btn"></label>
+      </div>
+      <!--Fim_Navegação_Manual-->
+    </section>
+    <!--Fim_Carrossel--> 
+
+    <!--Início_Sobre_Nós-->
+    <section class="sobre-nos">
+      <div class="imgdiv">
+        <img src="img/Fundo1.jpg" alt="">
+        <div class="text">
+          <h1 class="titulo">Sobre Nós</h1>
+          <p class="desc">A PetPatinhas é uma instituição que busca facilitar e incentivar a adoção de Pets no Brasil!</p>
+        </div>
+      </div>
+    </section>
+    <!--Fim_Sobre_Nós--> 
+
+    <!--Início_Requerimentos-->
+    <section class="req">
+        <div class="box" style="background-color: white;">
+          <h1>Quer adotar? Veja os requerimentos:</h1>
+          <div class="cards">
+          <div class="rimg">
+            <img src="img/Casinha.png" alt="casa">
+            <button>Encontre seu pet</button>
+            <dialog>
+                <h2 class="title">Encontre seu pet!</h2>
+                <div class="ibox">
+                  <img class="img22" src="img/gato1.png">
+                  <img class="img22" src="img/gato2.png">
+                  <img class="img22" src="img/gato3.png">
+                  <img class="img22" src="img/Gatorindo1.png">
+                </div>
+                <div class="ibox2">
+                  <img class="img22" src="img/Cao.png">
+                  <img class="img22" src="img/Cao2.png">
+                  <img class="img22" src="img/Cao3.png">
+                  <img class="img22" src="img/cao4.png">
+                </div>
+                  <button>Fechar</button>
+            </dialog>
+          </div>
+          <div class="rimg">
+            <img src="img/Form.png" alt="form">
+              <h2 class="title">Preencha o formulário</h2>
+              <p class="desc"> Preencha o formulário de interesse em uma de nossas unidades ou online. 
+                Caso preencha o formulário virtual, entraremos em contato com você em até 72h!</p>
+          </div>
+          <div class="rimg">
+            <img src="img/Form2.png" alt="form2">
+              <h2 class="title">Análise de formulário</h2>
+              <p class="desc">Após preenchimento, seu perfil será avaliado e você receberá a resposta na hora! 
+                Entretanto, caso tenha feito o procedimento online, a resposta será enviada por telefone ou e-mail.</p>
+          </div>
+          <div class="rimg">
+            <img src="img/Adote1.png" alt="adote">
+              <h2 class="title">Adoção completa</h2>
+              <p class="desc">Após aprovação, você estará pronto para levar seu animalzinho para casa! 
+                Porém, se tiver preenchido o formulário virtual, busque seu animalzinho no dia combinado previamente!</p>
+          </div>
+          </div>
+        </div>
+    </section>
+    <!--Fim_Requerimentos-->
+
+    <!--Início_Parceiros-->
+    <section class="par">
+      <h1>Parceiros</h1>
+      <div class="imagem"> 
+        <a href="https://cimatecjr.com.br/">
+          <img src="img/CimatecJr.png" alt="Jr">
+        </a>
+      </div>
+    </section>
+    <!--Fim_Parceiros-->
+
+    <!--Início_Dúvidas-->
+    <section class="duv">
+        <div class="caixa" style="background-color: hsl(23, 100%, 64%);">
+          <h1 class="titulo">Dúvidas?</h1>
+          <p class="desc">Nessa área você encontrará respostas para as
+            dúvidas mais frequentes em relação ao processo de adoção e a empresa</p>
+          <div class="caixinha" style="background-color: hsl(251, 33%, 54%);">
+            <a class="link" href="#">
+            <p class="desc2">Ir para perguntas frequentes</p>
+            </a>
+          </div>
+        </div>
+    </section>
+    <!--Fim_Dúvidas-->
+
+    <!--Início_Rodapé-->
+    <footer class="footer">
+      <div class="container">
+        <div class="info">
+          <div class="logo">
+              <img class="img" src="img/Logo.png">
+              <a class="nome">PetPatinhas</a>
+          </div>
+          <div class="text">
+            <p class="descl">A PetPatinhas é uma instituição que busca 
+              facilitar e incentivar a adoção de Pets no Brasil!</p>
+          </div>
+          <div class="redes">
+            <a href="#">
+              <img class="rd" src="img/insta (1).png">
+            </a>
+            <a href="#">
+              <img class="rd" src="img/face (1).png">
+            </a>
+          </div>
+        </div>
+        <div class="menu">
+          <div class="institucional">
+            <h1 class="titulo">Institucional</h1>
+            <a class="desc" href="#">ONGS</a>
+            <a class="desc" href="#">Unidades</a>
+            <a class="desc" href="#">FAQ</a>
+          </div>
+          <div class="cajudar">
+            <h1 class="titulo">Sobre</h1>
+            <a class="desc" href="#">Quero adotar</a>
+            <a class="desc" href="#">Quero doar</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Fim_Rodapé-->
+    <script src="main.js"></script>
+  </body>
+</html>

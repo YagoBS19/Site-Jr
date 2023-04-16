@@ -1,0 +1,544 @@
+*{
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: 'Patrick Hand', cursive;
+}
+/*Início_Cabeçalho*/
+body
+{
+ background-color: hsl(300, 100%, 96%);
+}
+header .container nav img{
+  width: 120px;
+  height: 120px;
+}
+section, footer{
+  padding: 54px 0;
+}
+.container{
+  min-width: none;
+  margin: 0 auto;
+  padding: 0 10%;
+}
+nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .container nav .logo{
+  margin-top: 0px;
+  margin-bottom: -10px;
+  margin-left: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .container nav .logo .nome{
+  margin-bottom: -30px;
+  margin-left: -15px;
+  margin-right: 20px;
+  font-size: 20px;
+  color: hsl(23, 100%, 64%);
+}
+header .container nav ul{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  text-align: center;
+}
+.txtn{
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+  font-size: 20px;
+  margin-left: 30px;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+header .container nav ul .txtn::after{
+ content: "";
+ background-color: hsl(251, 33%, 54%) ;
+ height: 2px;
+ width: 0%;
+ display: block;
+ margin: 0 auto;
+ transition: .3s;
+}
+header .container nav ul .txtn:hover::after{
+  width: 100%;
+}
+.adote{
+  background-color: white;
+  width: 120px;
+  height: 50px;
+  margin-left: 150px;
+  border: 2px solid hsl(23, 100%, 64%) ;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  transition: .3s;
+}
+.login{
+  background-color: white;
+  width: 120px;
+  height: 50px;
+  margin-left: 10px;
+  border: 2px solid hsl(251, 33%, 54%) ;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  transition: .3s;
+}
+.adote, .login{
+  font-size: 20px;
+  color: black;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+.adote:hover{
+  background-color: hsl(23, 100%, 64%) ;
+  color: white;
+}
+.login:hover{
+  background-color: hsl(251, 33%, 54%);
+  color: white;
+}
+header .container nav .ico{
+  cursor: pointer;
+  font-size: 25px;
+  color: hsl(251, 33%, 54%);
+  display: none;
+}
+header .container nav .close{
+  color: hsl(251, 33%, 54%);
+  display: none;
+  font-size: 30px;
+}
+@media(max-width: 1100px){
+  header .container nav ul{
+    position:fixed;
+    top: 0;
+    left: 0;
+    background-color: hsl(300, 100%, 96%);
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+    gap: 20px;
+    clip-path: circle(0% at 100% 0);
+    transition: .7s;
+  }
+  header .container nav ul.open{
+    clip-path: circle(141.2% at 100% 0);
+    z-index: 10;
+  }
+  .adote{
+    background-color: white;
+    width: 120px;
+    height: 50px;
+    margin-left: 0px;
+    border: 2px solid hsl(23, 100%, 64%) ;
+    border-radius: 10px;
+    padding: 10px;
+    transition: .3s;
+  }
+  .login{
+    background-color: white;
+    width: 120px;
+    height: 50px;
+    margin-left: 0px;
+    border: 2px solid hsl(251, 33%, 54%) ;
+    border-radius: 10px;
+    padding: 10px;
+    transition: .3s;
+  }
+  .txtn{
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+    font-size: 20px;
+    margin-left: 0px;
+    margin-top: 0px;
+    text-transform: uppercase;
+  }
+  header .container nav .ico{
+    position: fixed;
+    display:block;
+    margin-left: 850px;
+    z-index: 9;
+  }
+  header .container nav .close{
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 250px;
+  }
+  .req .desc{
+    margin-top: -20px;
+    padding: -30px 10px;
+  }
+}
+/*Fim_Cabeçalho*/
+
+/*Início_Carrossel*/
+/*Início_Esqueleto_do_carrossel*/
+.slider
+{
+ margin: 0 auto;
+ width: 880px;
+ height: 420px;
+ border-radius: 10px;
+ margin-top: 20px;
+ overflow: hidden;
+}
+.slides
+{
+  width: 400%;
+  height: 420px;
+  display: flex;
+}
+.slide img
+{
+  border-radius: 10px;
+  width: 880px;
+  height: 440px;
+}
+.slides input
+{
+  display: none;
+}
+.slide
+{
+  width: 25%;
+  position: relative;
+  transition: 1.5s;
+}
+/*Fim_Esqueleto_do_Carrossel*/
+
+/*Início_Navegação_do_Carrossel*/
+.navi-manual
+{
+ position: relative;
+ width: 1024px;
+ margin-top: -90px;
+ display: flex;
+ justify-content: center;
+ margin-left: -60px;
+}
+.manual-btn
+{
+ width: 16px;
+ height: 16px;
+ border: 2px solid hsl(23, 100%, 64%);
+ padding: 5px;
+ border-radius: 30px;
+ cursor: pointer;
+ transition: .5s;
+
+}
+.manual-btn:not(:last-child)
+{
+  margin-right: 15px;
+}
+.manual-btn:hover
+{
+  background-color: hsl(251, 33%, 54%);
+}
+#r1:checked ~ .first
+{
+  margin-left: 0;
+}
+#r2:checked ~ .first
+{
+  margin-left: -25%;
+}
+.navi-auto div
+{
+  width: 16px;
+  height: 16px;
+  padding: 5px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: .5s;
+  margin-top: -50px;
+}
+.navi-auto
+{
+  position: absolute;
+  width: 1024px;
+  margin-top: 380px;
+  display: flex;
+  justify-content: center;
+  margin-left: -60px;
+}
+.navi-auto div:not(:last-child)
+{
+  margin-right: 15px;
+}
+#r1:checked ~.navi-auto .auto-btn1
+{
+  background-color: hsl(251, 33%, 54%);
+}
+#r2:checked ~.navi-auto .auto-btn2
+{
+  background-color: hsl(251, 33%, 54%);
+}
+/*Fim_Navegação_do_Carrossel*/
+
+/*Fim_Carrossel*/
+
+/*Inicio_Sobre_Nós*/
+.sobre-nos .imgdiv{
+  margin: 0 auto;
+  margin-top: 0px;
+  height:300px;
+  width:700px;
+  text-align:center;
+  vertical-align:middle;
+  line-height:50px;
+  position:relative;
+  color:white;
+}
+.sobre-nos .imgdiv img{
+  border-radius: 10px;
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  z-index:-1;
+  width:100%;
+  height:100%;
+}
+.sobre-nos .imgdiv .text{
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+.sobre-nos .imgdiv .titulo{
+  font-size: 50px;
+  margin-top: 20px;
+}
+.sobre-nos .imgdiv .desc{
+  margin-top: 20px;
+  font-size: 25px;
+}
+/*Fim_Sobre_Nós*/
+
+/*Início_Requerimentos*/
+.req .box .rimg img{
+  width: 120px;
+}
+.title{
+  font-size: 25px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+.desc{
+  font-size: 20px;
+  padding: 0 5px;
+}
+.req h1{
+  text-align: center;
+  line-height: 100px;
+  font-size: 50px;
+}
+.req{
+  margin-top: -50px;
+  border-radius: 20px;
+}
+.box{
+  position: relative;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: 3px solid hsl(251, 33%, 54%);
+  max-width: none;
+  max-height: none;
+}
+.cards{
+  margin: 0 auto;
+  display: flex;
+  justify-content:center;
+  text-align: center;
+  margin-bottom: 20px;
+  gap: 60px;
+  max-width: 1300px;
+  max-height: 600px;
+}
+dialog{
+  border: 2px solid hsl(251, 33%, 54%);
+  border-radius: 10px;
+  box-shadow:black ;
+  width: 800px;
+  height: 320px;
+}
+dialog button{
+  width: 90px;
+  font-size: 20px;
+}
+dialog .title{
+  font-size: 30px;
+}
+dialog .ibox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+dialog .ibox2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.img22{
+  width: 120px;
+  height: 80px;
+}
+/*Fim_Requerimentos*/
+
+/*Início_Parceiros*/
+.par{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+}
+.par img{
+  width: 180px;
+}
+/*Fim_Parceiros*/
+
+/*Início_Dúvidas*/
+.duv{
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.duv .caixa{
+  width: 600px;
+  height: 300px;
+  text-align: center;
+  padding: 0 20px;
+  border-radius: 10px ;
+}
+.duv .caixa .caixinha{
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 200px;
+  height: 60px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 0 20px;
+}
+.duv .caixa .titulo{
+  font-size: 50px;
+  margin-top: 5px;
+  color: white;
+}
+.duv .caixa .desc{
+  margin-top: 20px;
+  font-size: 25px;
+  padding: 0 70px;
+  color: white;
+}
+.duv .caixa .caixinha .desc2{
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  transition: .3s;
+}
+.duv .caixa .caixinha .desc2:hover{
+  color: black;
+}
+.duv .caixa .caixinha .link{
+  text-decoration: none;
+
+}
+/*Fim_Dúvidas*/
+
+/*Início_Rodapé*/
+.footer{
+  margin-top: -100px;
+  background-color: hsl(251, 33%, 54%);
+  border-top-right-radius: 100px;
+  border-top-left-radius: 100px;
+  height: 400px;
+}
+.footer .container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footer .container .info{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 300px;
+  max-height: 400px;
+  margin-top: -30px;
+}
+.footer .container .info .logo{
+  margin-top: 50px;
+  margin-left: -25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer .container .info .logo .nome{
+  margin-bottom: -30px;
+  margin-left: -15px;
+  font-size: 20px;
+  color: hsl(23, 100%, 64%);
+}
+.footer .container .info .text .descl{
+  margin-bottom: 10px;
+  text-align: justify;
+  font-size: 20px;
+  color: white;
+}
+.footer .container .menu{
+  margin: 0 auto;
+  gap: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer .container .menu .institucional{
+  display: flex;
+  flex-direction: column;
+}
+.footer .container .menu .cajudar{
+  display: flex;
+  flex-direction: column;
+}
+.footer .container .menu .titulo{
+  color: hsl(23, 100%, 64%);
+  margin-left: -20px;
+}
+.footer .container .menu .desc{
+  color: white;
+  margin-left: -20px;
+  text-decoration: none;
+}
+.footer .container .info .logo .img{
+  width: 120px;
+  height: 120px;
+}
+.footer .container .info .redes .rd{
+  width: 30px;
+  height: 30px;
+}
+/*Fim_Rodapé*/
